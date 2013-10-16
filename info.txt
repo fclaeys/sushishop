@@ -1,0 +1,26 @@
+NodeJS (http://nodejs.org/)
+commande = npm install -g yo
+(npm = bower de nodeJS)
+
+Yeoman (http://yeoman.io/)
+= suite d'outils : YO / GRUNT / BOWER
+= c'est do NodeJS (a installer sur le PC)
+
+YO : permet de générer le squelette d'un projet
+et d'ajouter des éléments une fois le projet créé (exemple: ajouter une directive, un module, ...).
+
+GRUNT : permet de builder les projets.
+Avantage : gère le live-reload (actualisation du navigateur en live)
+Lance un serveur NodeJS en local (HTTP).
+Un peu comme le ant d'un projet JAVA
+
+BOWER : permet de gérer les dépendances
+Un peu comme Maven en java.
+Configuré dans le fichier "component.json"
+commande : bower install
+
+INSTALL :
+npm install -g yo
+npm install -g generator-angular
+yo angular
+
