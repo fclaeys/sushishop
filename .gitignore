@@ -1,3 +1,9 @@
+/.idea_modules
+/.classpath
+/.project
+/.idea
+/*.iml
+/app/dist
 node_modules
 dist
 .tmp
