@@ -9,22 +9,21 @@ et d'ajouter des éléments une fois le projet créé (exemple: ajouter une dire
 GRUNT : permet de builder les projets.
 Avantage : gère le live-reload (actualisation du navigateur en live)
 Lance un serveur NodeJS en local (HTTP).
-Un peu comme le ant d'un projet JAVA
+Un peu comme le ant d'un projet JAVA (lance les tests, ...)
 
 BOWER : permet de gérer les dépendances
 Un peu comme Maven en java.
-Configuré dans le fichier "component.json"
-commande : bower install
+Configuré dans le fichier "component.json" (ou bower.json pour les nouvelles versions)
 
 INSTALL :
 1) Installe NodeJS : http://nodejs.org/ (npm = bower de nodeJS)
 npm install -g yo
 npm install -g generator-angular
 yo angular
-bower install
+bower install //récupère les dépendances
 
 LANCER SERVEUR :
-grunt server --force
+grunt server
 
 AJOUTER ROUTE:
 yo angular:route
