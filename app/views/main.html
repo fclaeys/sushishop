@@ -9,8 +9,8 @@
             </thead>
         </table>
     </div>
-    <div class="span4">
-        <ul class="thumbnail">
+    <div class="span4 thumbnail">
+        <ul>
             <li ng-repeat="item in shoppingCart"><span>{{item.name}}x{{item.quantity}} - {{item.price}}</span> <span ng-click="removeFromCart(item);">X</span></li>
         </ul>
         <hr />

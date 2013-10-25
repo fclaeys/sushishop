@@ -34,3 +34,11 @@ $scope est le "M" du MVC, c'est la variable partagée entre la view et le contro
 ng-repeat="sushi in catalogue"
 on peut appliquer des filtres aux
 ng-repeat="sushi in catalogue | orderBy:'price'"
+
+/--------\
+|  TODO  |
+\--------/
+
+- Promises
+- Tests unitaires
+- IHM ++
