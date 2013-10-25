@@ -11,7 +11,7 @@
     </div>
     <div class="span4">
         <ul class="thumbnail">
-            <li ng-repeat="item in shoppingCart">{{item.name}}x{{item.quantity}} - {{item.price}}</li>
+            <li ng-repeat="item in shoppingCart"><span>{{item.name}}x{{item.quantity}} - {{item.price}}</span> <span ng-click="removeFromCart(item);">X</span></li>
         </ul>
     </div>
 </div>
