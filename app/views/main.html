@@ -1,9 +1,12 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<div class="row-fluid">
+    <div class="span12">
+        <table class="table table-striped">
+            <tbody>
+                <tr ng-repeat="sushi in catalogue | orderBy:'price'"><td></td><td>{{sushi.name}}</td><td>{{sushi.price | currency:'$'}}</td><td>+</td></tr>
+            </tbody>
+            <thead>
+                <tr><th></th><th>Nom du produit</th><th>Prix</th><th>+</th></tr>
+            </thead>
+        </table>
+    </div>
 </div>
