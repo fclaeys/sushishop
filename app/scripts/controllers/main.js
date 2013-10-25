@@ -22,11 +22,9 @@ angular.module('sushishopApp')
             inShoppingCart[0].price+=sushi.price;
             inShoppingCart[0].quantity+=1;
         }
+        $scope.total += sushi.price;
     }
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    $scope.total = 0;
+
+});

@@ -13,5 +13,7 @@
         <ul class="thumbnail">
             <li ng-repeat="item in shoppingCart">{{item.name}}x{{item.quantity}} - {{item.price}}</li>
         </ul>
+        <hr />
+        <p>Total : {{total | currency:'$'}}</p>
     </div>
 </div>
