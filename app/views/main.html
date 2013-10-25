@@ -1,0 +1,19 @@
+<div class="row-fluid">
+    <div class="span8">
+        <table class="table table-striped">
+            <tbody>
+                <tr ng-repeat="sushi in catalogue | orderBy:'price'"><td></td><td>{{sushi.name}}</td><td>{{sushi.price | currency:'$'}}</td><td ng-click="addToCart(sushi);">+</td></tr>
+            </tbody>
+            <thead>
+                <tr><th></th><th>Nom du produit</th><th>Prix</th><th>+</th></tr>
+            </thead>
+        </table>
+    </div>
+    <div class="span4">
+        <ul class="thumbnail">
+            <li ng-repeat="item in shoppingCart"><span>{{item.name}}x{{item.quantity}} - {{item.price}}</span> <span ng-click="removeFromCart(item);">X</span></li>
+        </ul>
+        <hr />
+        <p>Total : {{total | currency:'$'}}</p>
+    </div>
+</div>
