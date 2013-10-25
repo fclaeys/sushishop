@@ -27,3 +27,10 @@ grunt server
 
 AJOUTER ROUTE:
 yo angular:route
+
+-------------------------
+ANGULAR
+$scope est le "M" du MVC, c'est la variable partagée entre la view et le controller.
+ng-repeat="sushi in catalogue"
+on peut appliquer des filtres aux
+ng-repeat="sushi in catalogue | orderBy:'price'"
