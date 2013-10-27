@@ -4,29 +4,53 @@ body {
     color: #333;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-}
-
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
 header {
-    height: 75px;
+    height: 55px;
     color: #ffffff;
     background-color: black;
+    padding: 10px;
 }
 
 header h1 {
     margin: 0;
+}
+
+.main-page{
+    margin-top: 50px;
+
+}
+
+h2{
+    font-size: 2em;
+    margin-top: -4px;
+    text-align: center;
+}
+
+.cart li{
+    list-style-type: none;
+}
+
+.sushi_picture {
+    height: 50px;
+    margin-top: -14px;
+}
+
+.table-striped td {
+    vertical-align: middle;
+}
+
+.button_cellule {
+    width: 30px;
+}
+
+.button_cellulename {
+    width: 90px;
+}
+
+[class^="icon-"]:hover {
+    cursor: pointer;
+}
+
+#btn-cmd {
+    text-align: center;
 }

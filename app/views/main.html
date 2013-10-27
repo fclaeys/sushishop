@@ -1,19 +1,42 @@
-<div class="row-fluid">
+<div class="row-fluid main-page">
     <div class="span8">
-        <table class="table table-striped">
+        <table class="table table-striped table table-hover">
             <tbody>
-                <tr ng-repeat="sushi in catalogue | orderBy:'price'"><td></td><td>{{sushi.name}}</td><td>{{sushi.price | currency:'$'}}</td><td ng-click="addToCart(sushi);">+</td></tr>
+                <tr ng-repeat="sushi in catalogue | orderBy:'price'">
+                    <td></td>
+                    <td><img src="pictures/{{sushi.img}}" alt="" class="sushi_picture"/></td>
+                    <td>{{sushi.name}}</td>
+                    <td>{{sushi.price | currency:'$'}}</td>
+                    <td ng-click="addToCart(sushi);"><i class="icon-plus-sign"></i></td>
+                </tr>
             </tbody>
             <thead>
-                <tr><th></th><th>Nom du produit</th><th>Prix</th><th>+</th></tr>
+                <tr>
+                    <th></th>
+                    <th>Image</th>
+                    <th>Nom du produit</th>
+                    <th>Prix</th>
+                    <th></th>
+                </tr>
             </thead>
         </table>
     </div>
-    <div class="span4 thumbnail">
-        <ul>
-            <li ng-repeat="item in shoppingCart"><span>{{item.name}}x{{item.quantity}} - {{item.price}}</span> <span ng-click="removeFromCart(item);">X</span></li>
-        </ul>
+    <div class="span4 thumbnail cart">
+        <h2>Mon panier</h2>
+        <table class="panier table table-hover">
+            <tr ng-repeat="item in shoppingCart">
+                <td class="button_cellule-name">{{item.name}}</td>
+                <td class="button_cellule">x{{item.quantity}}</td>
+                <td class="button_cellule">{{item.price}}$</td>
+                <td class="button_cellule"><i class="icon-plus-sign"></i></td>
+                <td class="button_cellule"><i class="icon-minus-sign" ng-click="removeFromCart(item);"></i></td>
+                <td class="button_cellule"><i class="icon-trash"></i></td>
+            </tr>
+        </table>
         <hr />
         <p>Total : {{total | currency:'$'}}</p>
+        <p id="btn-cmd">
+            <button class="btn btn-primary" type="button">Finaliser ma commande</button>
+        </p>
     </div>
 </div>
