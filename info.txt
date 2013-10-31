@@ -24,11 +24,13 @@ INSTALL :
 1) Installe NodeJS : http://nodejs.org/ (npm = bower de nodeJS)
 npm install -g yo
 npm install -g generator-angular
-yo angular
 
 /-------------\
 |  COMMANDES  |
 \-------------/
+
+Pour initialiser un projet angular, dans le répertoire du projet fraichement créer :
+yo angular
 
 Installer les dépendances GRUNT dans un projet :
 npm install
