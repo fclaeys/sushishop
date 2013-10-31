@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sushishopApp', [])
+angular.module('SushishopApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

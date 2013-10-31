@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sushishopApp')
+angular.module('SushishopApp')
   .controller('MainCtrl', function ($scope) {
     $scope.catalogue = [
         {name:"Sushi thon", price: 5, img: "img_sushi_thon.png"},
