@@ -15,4 +15,9 @@ describe('Service: Catalogservice', function () {
     expect(!!Catalogservice).toBe(true);
   });
 
+  it('should return catalog', function(){
+    expect(Catalogservice.getSushies()).not.toBeNull();
+    expect(Catalogservice.getSushies().length).toBeGreaterThan(0);
+  });
+
 });
