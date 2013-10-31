@@ -15,18 +15,38 @@ BOWER : permet de gérer les dépendances
 Un peu comme Maven en java.
 Configuré dans le fichier "component.json" (ou bower.json pour les nouvelles versions)
 
+JASMINE = Fwk de test (http://pivotal.github.io/jasmine/)
+
+KARMA = Exécuteur de test
+Configuré dans : "karma.conf.js"
+
 INSTALL :
 1) Installe NodeJS : http://nodejs.org/ (npm = bower de nodeJS)
 npm install -g yo
 npm install -g generator-angular
 yo angular
-bower install //récupère les dépendances
 
-LANCER SERVEUR :
+/-------------\
+|  COMMANDES  |
+\-------------/
+
+Installer les dépendances GRUNT dans un projet :
+npm install
+
+Récupérer les dépendances du projet :
+bower install
+
+Lancer serveur :
 grunt server
 
-AJOUTER ROUTE:
-yo angular:route
+Lancer tests unitaires :
+grunt test
+
+Ajouter une route:
+yo angular:route main
+
+Ajouter un service (bean contenant la logique métier):
+yo angular:service catalogueService
 
 -------------------------
 ANGULAR
