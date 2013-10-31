@@ -15,4 +15,12 @@ describe('Service: Cartservice', function () {
     expect(!!Cartservice).toBe(true);
   });
 
+  it('should add sushi into cart', function () {
+      var sushi = {name:"Sushi thon", price: 5, img: "img_sushi_thon.png"};
+
+      Cartservice.add(sushi);
+      expect(Cartservice.getCart().sushies.length).toBe(1);
+      expect(Cartservice.getCart().sushies[0]).toBe(sushi);
+  });
+
 });
