@@ -7,8 +7,10 @@ describe('Service: Cartservice', function () {
 
   // instantiate service
   var Cartservice;
-  beforeEach(inject(function (_Cartservice_) {
+  var Catalogservice;
+  beforeEach(inject(function (_Cartservice_,_Catalogservice_) {
     Cartservice = _Cartservice_;
+    Catalogservice = _Catalogservice_;
   }));
 
   it('should do something', function () {
@@ -22,5 +24,18 @@ describe('Service: Cartservice', function () {
       expect(Cartservice.getCart().sushies.length).toBe(1);
       expect(Cartservice.getCart().sushies[0]).toBe(sushi);
   });
+
+  it('should remove sushi from cart',function(){
+     var allSushies = Catalogservice.getSushies();
+
+      Cartservice.add(allSushies[0]);
+
+
+     var sushiWillBeDead = allSushies[0];
+
+     Cartservice.remove(sushiWillBeDead);
+
+      expect(Cartservice.getCart().sushies.length).toBe(0);
+  }) ;
 
 });

@@ -14,6 +14,13 @@ angular.module('SushishopApp')
             },
             add: function(sushi){
                 cart.sushies.push(sushi);
+            },
+            remove: function(sushi){
+               var index = cart.sushies.indexOf(sushi);
+                if(index > -1){
+                    cart.sushies.splice(index,1);
+                }
+
             }
         }
   });
