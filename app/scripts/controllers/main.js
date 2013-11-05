@@ -1,12 +1,13 @@
 'use strict';
 
 angular.module('SushishopApp')
-  .controller('MainCtrl', function ($scope, Catalogservice) {
+  .controller('MainCtrl', function ($scope, Catalogservice, Cartservice) {
     $scope.catalogue = Catalogservice.getSushies();
 
     $scope.shoppingCart = [];
 
     $scope.addToCart = function(sushi){
+        //Cartservice.add(sushi);
         var inShoppingCart = $scope.shoppingCart.filter(function(elt){
             return elt.name == sushi.name;
         });

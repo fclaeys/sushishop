@@ -13,7 +13,14 @@ angular.module('SushishopApp')
                 return cart;
             },
             add: function(sushi){
-                cart.sushies.push(sushi);
+                var inShoppingCart = cart.sushies.filter(function(elt){
+                    return elt.name == sushi.name;
+                });
+
+                if(inShoppingCart.length == 0){
+                    var itemToAdd= angular.copy(sushi);
+                    cart.sushies.push(sushi);
+                }
             },
             remove: function(sushi){
                var index = cart.sushies.indexOf(sushi);

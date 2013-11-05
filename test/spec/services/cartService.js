@@ -36,6 +36,15 @@ describe('Service: Cartservice', function () {
      Cartservice.remove(sushiWillBeDead);
 
       expect(Cartservice.getCart().sushies.length).toBe(0);
-  }) ;
+  });
 
+  it('should\'nt add sushi twice',function(){
+      var sushi = {name:"Sushi thon", price: 5, img: "img_sushi_thon.png"};
+
+      Cartservice.add(sushi);
+      Cartservice.add(sushi);
+
+      expect(Cartservice.getCart().sushies.length).toBe(1);
+      expect(Cartservice.getCart().sushies[0]).toBe(sushi); 
+  });
 });
