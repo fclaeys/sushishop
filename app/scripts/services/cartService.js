@@ -5,7 +5,8 @@ angular.module('SushishopApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
 
         var cart = {
-            sushies : []
+            sushies : [],
+            total : 0
         };
 
         var filterSushiByName = function(sushi){
@@ -28,14 +29,20 @@ angular.module('SushishopApp')
                 }else{
                     inShoppingCart[0].quantity += 1;
                 }
+
+                cart.total += sushi.price;
             },
             remove: function(sushi){
                 var inShoppingCart = cart.sushies.filter(filterSushiByName(sushi));
                 var index = cart.sushies.indexOf(inShoppingCart[0]);
-                if(index > -1){
-                    cart.sushies.splice(index,1);
+                if (inShoppingCart[0].quantity == 1) {
+                    if(index > -1){
+                        cart.sushies.splice(index,1);
+                    }
+                } else {
+                    inShoppingCart[0].quantity--;
                 }
-
+                cart.total -= sushi.price;
             }
         }
   });
