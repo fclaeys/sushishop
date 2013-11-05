@@ -22,7 +22,7 @@ describe('Service: Cartservice', function () {
 
       Cartservice.add(sushi);
       expect(Cartservice.getCart().sushies.length).toBe(1);
-      expect(Cartservice.getCart().sushies[0]).toBe(sushi);
+      expect(Cartservice.getCart().sushies[0].name).toBe(sushi.name);
   });
 
   it('should remove sushi from cart',function(){
@@ -45,6 +45,17 @@ describe('Service: Cartservice', function () {
       Cartservice.add(sushi);
 
       expect(Cartservice.getCart().sushies.length).toBe(1);
-      expect(Cartservice.getCart().sushies[0]).toBe(sushi); 
+      expect(Cartservice.getCart().sushies[0].name).toBe(sushi.name); 
   });
+
+  it('should update quantity for sushi add twice ',function(){
+      var sushi = {name:"Sushi thon", price: 5, img: "img_sushi_thon.png"};
+
+      Cartservice.add(sushi);
+      Cartservice.add(sushi);
+
+      expect(Cartservice.getCart().sushies.length).toBe(1);
+      expect(Cartservice.getCart().sushies[0].name).toBe(sushi.name);
+      expect(Cartservice.getCart().sushies[0].quantity).toBe(2); 
+  });  
 });

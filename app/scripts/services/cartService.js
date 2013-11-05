@@ -8,22 +8,30 @@ angular.module('SushishopApp')
             sushies : []
         };
 
+        var filterSushiByName = function(sushi){
+            return function(elt){
+                return elt.name == sushi.name;
+            };
+        };
+
         return {
             getCart: function(){
                 return cart;
             },
             add: function(sushi){
-                var inShoppingCart = cart.sushies.filter(function(elt){
-                    return elt.name == sushi.name;
-                });
+                var inShoppingCart = cart.sushies.filter(filterSushiByName(sushi));
 
                 if(inShoppingCart.length == 0){
                     var itemToAdd= angular.copy(sushi);
-                    cart.sushies.push(sushi);
+                    angular.extend(itemToAdd, {quantity: 1});
+                    cart.sushies.push(itemToAdd);
+                }else{
+                    inShoppingCart[0].quantity += 1;
                 }
             },
             remove: function(sushi){
-               var index = cart.sushies.indexOf(sushi);
+                var inShoppingCart = cart.sushies.filter(filterSushiByName(sushi));
+                var index = cart.sushies.indexOf(inShoppingCart[0]);
                 if(index > -1){
                     cart.sushies.splice(index,1);
                 }
