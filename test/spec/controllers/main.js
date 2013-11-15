@@ -15,4 +15,12 @@ describe('Controller: MainCtrl', function () {
       $scope: scope
     });
   }));
+
+  it('should add sushi into cart', function () {
+      var sushi = {name:"Sushi thon", price: 5, img: "img_sushi_thon.png"};
+
+      scope.addToCart(sushi);
+      expect(scope.shoppingCart.sushies.length).toBe(1);
+      expect(scope.shoppingCart.sushies[0].name).toBe(sushi.name);
+  });
 });

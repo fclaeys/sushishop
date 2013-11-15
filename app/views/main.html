@@ -24,7 +24,7 @@
     <div class="span4 thumbnail cart">
         <h2>Mon panier</h2>
         <table class="panier table table-hover">
-            <tr ng-repeat="item in shoppingCart">
+            <tr ng-repeat="item in shoppingCart.sushies">
                 <td class="button_cellule-name">{{item.name}}</td>
                 <td class="button_cellule">x{{item.quantity}}</td>
                 <td class="button_cellule">{{item.price}}$</td>
@@ -34,7 +34,7 @@
             </tr>
         </table>
         <hr />
-        <p>Total : {{total | currency:'$'}}</p>
+        <p>Total : {{shoppingCart.total | currency:'$'}}</p>
         <p id="btn-cmd">
             <button class="btn btn-primary" type="button">Finaliser ma commande</button>
         </p>
