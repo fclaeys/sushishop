@@ -11,12 +11,7 @@ angular.module('SushishopApp')
     }
 
     $scope.removeFromCart= function(sushi){
-      sushi.quantity--;
-      if (sushi.quantity==0) {
-
-      }
-    };
-    $scope.total = 0;
-
+      Cartservice.remove(sushi);
+    }
 
   });
