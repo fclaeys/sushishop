@@ -32,17 +32,26 @@ angular.module('SushishopApp')
 
                 cart.total += sushi.price;
             },
-            remove: function(sushi){
+            remove: function(sushi, quantity){
                 var inShoppingCart = cart.sushies.filter(filterSushiByName(sushi));
                 var index = cart.sushies.indexOf(inShoppingCart[0]);
-                if (inShoppingCart[0].quantity == 1) {
+                var priceToDecrease = sushi.price;
+
+                if (!angular.isUndefined(quantity)) {
+                    inShoppingCart[0].quantity -= quantity;
+                    priceToDecrease *= quantity;
+                } else {
+                    inShoppingCart[0].quantity -= inShoppingCart[0].quantity;
+                    priceToDecrease *= inShoppingCart[0].quantity;
+                }
+
+                if (inShoppingCart[0].quantity <= 0) {
                     if(index > -1){
                         cart.sushies.splice(index,1);
                     }
-                } else {
-                    inShoppingCart[0].quantity--;
                 }
-                cart.total -= sushi.price;
+
+                cart.total -= priceToDecrease;
             }
         }
   });

@@ -29,8 +29,8 @@
                 <td class="button_cellule">x{{item.quantity}}</td>
                 <td class="button_cellule">{{item.price * item.quantity}}$</td>
                 <td class="button_cellule"><i class="icon-plus-sign"></i></td>
-                <td class="button_cellule"><i class="icon-minus-sign" ng-click="removeFromCart(item);"></i></td>
-                <td class="button_cellule"><i class="icon-trash"></i></td>
+                <td class="button_cellule"><i class="icon-minus-sign" ng-click="removeFromCart(item, 1);"></i></td>
+                <td class="button_cellule"><i class="icon-trash" ng-click="removeFromCart(item);"></i></td>
             </tr>
         </table>
         <hr />

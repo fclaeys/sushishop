@@ -10,8 +10,8 @@ angular.module('SushishopApp')
         Cartservice.add(sushi);
     }
 
-    $scope.removeFromCart= function(sushi){
-      Cartservice.remove(sushi);
+    $scope.removeFromCart= function(sushi, quantity){
+      Cartservice.remove(sushi, quantity);
     }
 
   });
