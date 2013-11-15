@@ -27,7 +27,7 @@
             <tr ng-repeat="item in shoppingCart.sushies">
                 <td class="button_cellule-name">{{item.name}}</td>
                 <td class="button_cellule">x{{item.quantity}}</td>
-                <td class="button_cellule">{{item.price}}$</td>
+                <td class="button_cellule">{{item.price * item.quantity}}$</td>
                 <td class="button_cellule"><i class="icon-plus-sign"></i></td>
                 <td class="button_cellule"><i class="icon-minus-sign" ng-click="removeFromCart(item);"></i></td>
                 <td class="button_cellule"><i class="icon-trash"></i></td>
