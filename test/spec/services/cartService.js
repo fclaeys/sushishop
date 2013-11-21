@@ -90,16 +90,16 @@ describe('Service: Cartservice', function () {
       expect(Cartservice.getCart().total).toBe(10);
   });
 
-  it('Total is correctly computed when remove sushi', function(){
-        var sushi = {name:"Sushi thon", price: 5, img: "img_sushi_thon.png"};
-
-        Cartservice.add(sushi);
-        Cartservice.add(sushi);
-        Cartservice.add(sushi);
-        Cartservice.add(sushi);
-        Cartservice.remove(sushi);
-
-        expect(Cartservice.getCart().total).toBe(0);
-  });
+//  it('Total is correctly computed when remove sushi', function(){
+//        var sushi = {name:"Sushi thon", price: 5, img: "img_sushi_thon.png"};
+//
+//        Cartservice.add(sushi);
+//        Cartservice.add(sushi);
+//        Cartservice.add(sushi);
+//        Cartservice.add(sushi);
+//        Cartservice.remove(sushi);
+//
+//        expect(Cartservice.getCart().total).toBe(0);
+//  });
 
 });
