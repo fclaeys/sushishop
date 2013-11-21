@@ -11,7 +11,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/e2e/**/*.js'
+        'app/bower_components/angular/angular.js',
+        'app/scripts/*.js',
+        'app/scripts/**/*.js',
+        'test/e2e/**/*.js'
     ],
 
     // list of files / patterns to exclude
@@ -42,13 +45,13 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
 
-    // Uncomment the following lines if you are using grunt's server to run the tests
-    // proxies: {
-    //   '/': 'http://localhost:9000/'
-    // },
+    //Uncomment the following lines if you are using grunt's server to run the tests
+     proxies: {
+       '/': 'http://localhost:9000/'
+     },
     // URL root prevent conflicts with the site root
-    // urlRoot: '_karma_'
+     urlRoot: '_karma_'
   });
 };
