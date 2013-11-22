@@ -41,8 +41,9 @@ angular.module('SushishopApp')
                     inShoppingCart[0].quantity -= quantity;
                     priceToDecrease *= quantity;
                 } else {
-                    inShoppingCart[0].quantity -= inShoppingCart[0].quantity;
                     priceToDecrease *= inShoppingCart[0].quantity;
+                    inShoppingCart[0].quantity -= inShoppingCart[0].quantity;
+                    
                 }
 
                 if (inShoppingCart[0].quantity <= 0) {
