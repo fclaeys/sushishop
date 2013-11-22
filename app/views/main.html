@@ -7,7 +7,7 @@
                     <td><img src="pictures/{{sushi.img}}" alt="" class="sushi_picture"/></td>
                     <td>{{sushi.name}}</td>
                     <td>{{sushi.price | currency:'$'}}</td>
-                    <td ng-click="addToCart(sushi);"><i class="icon-plus-sign"></i></td>
+                    <td ng-click="addToCart(sushi);"><i class="icon-plus-sign" id="catalog-click-item-{{sushi.id}}"></i></td>
                 </tr>
             </tbody>
             <thead>
@@ -24,7 +24,7 @@
     <div class="span4 thumbnail cart">
         <h2>Mon panier</h2>
         <table class="panier table table-hover">
-            <tr ng-repeat="item in shoppingCart.sushies">
+            <tr ng-repeat="item in shoppingCart.sushies" id="cart-item-{{item.id}}">
                 <td class="button_cellule-name">{{item.name}}</td>
                 <td class="button_cellule">x{{item.quantity}}</td>
                 <td class="button_cellule">{{item.price * item.quantity}}$</td>
