@@ -6,7 +6,7 @@ stepDefinitions = ->
                 @browser.visit @home, callback
 
         @Then /^Les shushis du catalogue sont affiches$/, (callback) ->
-                @browser.text('#catalog').should.have.string "Sushi au chat"
+                @browser.text('#catalog').should.have.string "Sushi thon"
                 callback()
 
 module.exports = stepDefinitions
