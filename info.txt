@@ -44,6 +44,9 @@ grunt server
 Lancer tests unitaires :
 grunt test
 
+Lancer tests Karma :
+grunt karma:e2e
+
 Ajouter une route:
 yo angular:route main
 
