@@ -6,6 +6,6 @@ Scenario: Affiche le catalogue sur la homepage
 
 Scenario: Ajout d un element au panier
   Given Je navigue sur la homepage
-  When Je clique sur le plus de sushi thon
+  When Je clique sur le plus de "Sushi thon"
   Then Mon panier contient un sushi thon
 

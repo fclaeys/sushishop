@@ -7,7 +7,7 @@
                     <td><img src="pictures/{{sushi.img}}" alt="" class="sushi_picture"/></td>
                     <td>{{sushi.name}}</td>
                     <td>{{sushi.price | currency:'$'}}</td>
-                    <td ng-click="addToCart(sushi);"><i class="icon-plus-sign" id="catalog-click-item-{{sushi.id}}"></i></td>
+                    <td ng-click="addToCart(sushi);"><i class="icon-plus-sign" id="{{sushi.name.replace(' ', '_') }}"></i></td>
                 </tr>
             </tbody>
             <thead>
